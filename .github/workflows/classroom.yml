@@ -33,7 +33,7 @@ jobs:
 
       - name: 'selectionSort'
         id: selectionsort
-        uses: classroom-resources/autograding-command-grader@v1
+        uses: cs-plus-plus/autograding-command-grader@v1
         with:
           test-name: 'selectionSort'
           setup-command: 'mvn -B -q compile'
@@ -43,7 +43,7 @@ jobs:
 
       - name: 'insertionSort'
         id: insertionsort
-        uses: classroom-resources/autograding-command-grader@v1
+        uses: cs-plus-plus/autograding-command-grader@v1
         with:
           test-name: 'insertionSort'
           setup-command: 'mvn -B -q compile'
@@ -53,7 +53,7 @@ jobs:
 
       - name: 'merge'
         id: merge
-        uses: classroom-resources/autograding-command-grader@v1
+        uses: cs-plus-plus/autograding-command-grader@v1
         with:
           test-name: 'merge'
           setup-command: 'mvn -B -q compile'
@@ -63,7 +63,7 @@ jobs:
 
       - name: 'mergeSort'
         id: mergesort
-        uses: classroom-resources/autograding-command-grader@v1
+        uses: cs-plus-plus/autograding-command-grader@v1
         with:
           test-name: 'mergeSort'
           setup-command: 'mvn -B -q compile'
@@ -73,7 +73,7 @@ jobs:
 
       - name: 'binarySearchIterative'
         id: binarysearchiterative
-        uses: classroom-resources/autograding-command-grader@v1
+        uses: cs-plus-plus/autograding-command-grader@v1
         with:
           test-name: 'binarySearchIterative'
           setup-command: 'mvn -B -q compile'
@@ -83,7 +83,7 @@ jobs:
 
       - name: 'binarySearchRecursive'
         id: binarysearchrecursive
-        uses: classroom-resources/autograding-command-grader@v1
+        uses: cs-plus-plus/autograding-command-grader@v1
         with:
           test-name: 'binarySearchRecursive'
           setup-command: 'mvn -B -q compile'
@@ -92,7 +92,7 @@ jobs:
           max-score: 15
 
       - name: Autograding Reporter
-        uses: classroom-resources/autograding-grading-reporter@v1
+        uses: cs-plus-plus/autograding-grading-reporter@v1
         env:
           SELECTIONSORT_RESULTS: "${{steps.selectionsort.outputs.result}}"
           INSERTIONSORT_RESULTS: "${{steps.insertionsort.outputs.result}}"
